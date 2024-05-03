@@ -10,7 +10,6 @@ installGlobals();
 export default defineConfig({
  base: "/deploy-github-pages/",
  plugins: [remix({
-    ssr: false,
     basename: "/deploy-github-pages/",
     buildEnd(args) {
       if (!args.viteConfig.isProduction) return;

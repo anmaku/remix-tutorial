@@ -8,9 +8,9 @@ import { join } from "node:path";
 installGlobals();
 
 export default defineConfig({
- base: "/deploy-github-pages/",
+ base: "/",
  plugins: [remix({
-    basename: "/deploy-github-pages/",
+    basename: "/",
     buildEnd(args) {
       if (!args.viteConfig.isProduction) return;
       const buildPath = args.viteConfig.build.outDir;

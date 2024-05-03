@@ -11,13 +11,5 @@ export default defineConfig({
  base: "/",
  plugins: [remix({
     basename: "/",
-    buildEnd(args) {
-      if (!args.viteConfig.isProduction) return;
-      const buildPath = args.viteConfig.build.outDir;
-      copyFileSync(
-        join(buildPath, "index.html"),
-        join(buildPath, "404.html"),
-      );
-    }
   }), tsconfigPaths()]
 });

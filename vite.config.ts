@@ -8,8 +8,8 @@ import { join } from "node:path";
 installGlobals();
 
 export default defineConfig({
- base: "/",
+ base: "/remix-tutorial/",
  plugins: [remix({
-    basename: "/",
+    basename: "/remix-tutorial/",
   }), tsconfigPaths()]
 });

@@ -20,12 +20,12 @@ export const links: LinksFunction = () => [
   { rel: "stylesheet", href: appStylesHref },
 ];
 
-  export const loader = async ({
-    request,
-  }: LoaderFunctionArgs) => {
-    const url = new URL(request.url);
-    const q = url.searchParams.get("q");
-    const contacts = await getContacts(q);
+export const loader = async ({
+  request,
+}: LoaderFunctionArgs) => {
+  const url = new URL(request.url);
+  const q = url.searchParams.get("q");
+  const contacts = await getContacts(q);
   return json({ contacts, q });
 };
 

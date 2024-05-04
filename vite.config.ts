@@ -6,8 +6,6 @@ import tsconfigPaths from "vite-tsconfig-paths";
 installGlobals();
 
 export default defineConfig({
-  base: "/remix-tutorial/",
-  plugins: [remix({
-    basename: "/remix-tutorial/",
-  }), tsconfigPaths()]
+  base: "/",
+  plugins: [remix(), tsconfigPaths()]
 });
